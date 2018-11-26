@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Hours, Phone Number - YiaYia's Greek Kitchen NJ</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+@font-face
+{font-family:"Greek Diner Inline TT";
+src:
+url("css/fonts/Greek.eot") format("eot"),
+url("css/fonts/Greek.woff") format("woff"),
+url("css/fonts/Greek.ttf") format("truetype"),
+url("css/fonts/Greek.svg#GreekDinerInlineTT") format("svg")
+}
+
+	.button {
+
+	background-color: #00b0f0;
+	background-image: url('call1.png');
+	background-size: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	color: #e3e3e3;
+	border: none;
+	padding: 25px 100px;
+	text-align: center;
+	border-radius: 20px;
+	font-size: 24px;
+	font-family:'Greek Diner Inline TT'; 
+	font-weight:normal;
+	font-style:normal;
+	
+	}
+	
+	.button2 {
+
+	background-color: #bc4756;
+	background-image: url('closed1.png');
+	background-size: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	color: #e3e3e3;
+	border: none;
+	padding: 25px 100px;
+	text-align: center;
+	border-radius: 20px;
+	font-size: 24px;
+	font-family:'Greek Diner Inline TT'; 
+	font-weight:normal;
+	font-style:normal;
+	}
+
+	.button:hover {
+	background-color:#00a6e8;
+	background-image: url('call2.png');
+	background-size: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+ 	color: #fff;
+	text-decoration: none;
+	}
+
+	.button:active {
+	background-image: url('call2.png');
+	background-size: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color:#0099e0; 
+	color: #fff;
+	text-decoration: none;	
+	}
+	
+
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 1000px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+	overflow: hidden;
+	flex-grow:1;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #0085d5;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+
+	h1 {font-family:'Greek Diner Inline TT'; font-weight:normal;font-style:normal;}
+	h3 {font-family:'Greek Diner Inline TT'; font-weight:normal;font-style:normal;}
+	li {font-family:'Greek Diner Inline TT'; font-weight:normal;font-style:normal;}
+
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="about.html"><img src="logoscale.png" alt="Logo" width=100% height=100%></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="directions.html">Directions</a></li>
+	<li class="active"><a href="info.html">Hours & Phone</a></li>
+      </ul>
+      
+    </div>
+  </div>
+</nav>
+  
+<div class="container-fluid text-center">    
+  <div class="row content">
+
+    <div class="col-sm-8 text-left"> 
+      <h1>Hours and Phone Number for YiaYia's Greek Kitchen</h1>
+	<h3>Hours</h3>
+      <p>xd we are open xd</p>
+      <hr>
+      <h3>Phone Number</h3>
+        <p>9739488088</p>
+    </div>
+
+    <div class="col-sm-2 sidenav">
+	<div>
+          <p><a href="https://www.facebook.com/YiaYiasGreekKitchenNJ">Facebook&#8599</a></p>
+          <p><a href="https://www.yelp.com/biz/yiayias-greek-kitchen-montague-township">Yelp&#8599</a></p>
+   	  <img src="gyro2.png" width=90%>
+	  
+	  <div></div>
+	</div>
+	<div style="padding: 15px 20px 0px 20px; display: inline-block;">
+	
+	<div id="test">
+	</div>
+
+	<script>
+	var myDate = new Date();
+	var dayOfWeek = myDate.getDay(); 
+	var time = myDate.getHours();
+	var isOpen = true;
+	
+	if (dayOfWeek = 1)
+	{
+		isOpen = false;
+	}
+	else if (dayOfWeek <= 4)
+	{
+		if (time < 11 || time >= 20)
+			isOpen = false;
+	}
+	else
+	{
+		if (time < 11 || time >= 21)
+			isOpen = false;
+	}
+	
+	if (isOpen) {
+		document.getElementById("test").innerHTML = '<a class="button 		visible-xs visible-sm hidden-md hidden-lg" 		href="tel:9739488088"></a>'
+	} else {
+		document.getElementById("test").innerHTML = '<a class="button2 		visible-xs visible-sm hidden-md hidden-lg"></a>'
+	
+	}
+	
+
+	</script>
+
+	</div>
+    </div>
+
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <p> &copy; 2018 YiaYia's Greek Kitchen NJ</p>
+</footer>
+
+</body>
+</html>
